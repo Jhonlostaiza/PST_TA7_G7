@@ -1,11 +1,7 @@
 package com.example.moneyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.view.View;
 
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -40,13 +36,12 @@ public class Inicio extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
     }
 
@@ -75,20 +70,24 @@ public class Inicio extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_inicio) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_registro_gastos) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_registro_ingresos) {
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_gastos) {
 
-        }else if (id == R.id.nav_send) {
-
+        }else if (id == R.id.nav_salir) {
+            Intent i = new Intent(this, MainActivity.class );
+            startActivity(i);
+            finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
