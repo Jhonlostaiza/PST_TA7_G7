@@ -1,6 +1,7 @@
 package com.example.moneyapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
@@ -69,11 +70,8 @@ public class Inicio extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_inicio) {
-            // Handle the camera action
         } else if (id == R.id.nav_registro_gastos) {
-
         } else if (id == R.id.nav_registro_ingresos) {
 
         } else if (id == R.id.nav_gastos) {
@@ -90,4 +88,6 @@ public class Inicio extends AppCompatActivity
     }
 
 
-}
+
+    }
+

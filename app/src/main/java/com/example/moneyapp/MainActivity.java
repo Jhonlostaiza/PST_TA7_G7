@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Esta función nos permite validar el usuario y la contraseña de la ventana, mostrando un mensaje de error si dichos parametros no son correctos.
+     * Al ser correctos, nos envia a la siguiente actividad.
+     */
     public void inicioSesion(View view){
         user=(EditText)findViewById(R.id.usuario);
         password=(EditText)findViewById(R.id.contraseña);
@@ -35,7 +39,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public String getUsuario(){
-        return usuario;
-    }
 }
