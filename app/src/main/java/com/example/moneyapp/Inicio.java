@@ -74,15 +74,19 @@ public class Inicio extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_inicio) {
-            // Handle the camera action
+            fragmentManager.beginTransaction().replace(R.id.content_inicio, new InicioFragment()).commit();
+
         } else if (id == R.id.nav_registro_gastos) {
+            fragmentManager.beginTransaction().replace(R.id.content_inicio, new RegistrarGastos()).commit();
 
         } else if (id == R.id.nav_registro_ingresos) {
-
             fragmentManager.beginTransaction().replace(R.id.content_inicio, new RegistroIngresos()).commit();
+
         } else if (id == R.id.nav_gastos) {
 
-        }else if (id == R.id.nav_salir) {
+        } else if (id == R.id.nav_ingresos) {
+
+        } else if (id == R.id.nav_salir) {
             Intent i = new Intent(this, MainActivity.class );
             startActivity(i);
             finish();

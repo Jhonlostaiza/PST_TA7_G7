@@ -11,14 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link RegistroIngresos.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link RegistroIngresos#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class RegistroIngresos extends Fragment implements View.OnClickListener{
 
     private Button b;
