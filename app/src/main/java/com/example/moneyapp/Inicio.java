@@ -73,7 +73,6 @@ public class Inicio extends AppCompatActivity
         int id = item.getItemId();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         if (id == R.id.nav_inicio) {
             // Handle the camera action
         } else if (id == R.id.nav_registro_gastos) {
@@ -81,7 +80,6 @@ public class Inicio extends AppCompatActivity
         } else if (id == R.id.nav_registro_ingresos) {
 
             fragmentManager.beginTransaction().replace(R.id.content_inicio, new RegistroIngresos()).commit();
-
         } else if (id == R.id.nav_gastos) {
 
         }else if (id == R.id.nav_salir) {
