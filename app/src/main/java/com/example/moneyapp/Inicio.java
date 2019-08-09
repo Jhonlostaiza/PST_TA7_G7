@@ -1,7 +1,6 @@
 package com.example.moneyapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
@@ -15,6 +14,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import androidx.fragment.app.FragmentManager;
 
 import android.view.Menu;
 
@@ -70,13 +71,22 @@ public class Inicio extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_inicio) {
+            fragmentManager.beginTransaction().replace(R.id.content_inicio, new InicioFragment()).commit();
+
         } else if (id == R.id.nav_registro_gastos) {
+            fragmentManager.beginTransaction().replace(R.id.content_inicio, new RegistrarGastos()).commit();
+
         } else if (id == R.id.nav_registro_ingresos) {
+            fragmentManager.beginTransaction().replace(R.id.content_inicio, new RegistroIngresos()).commit();
 
         } else if (id == R.id.nav_gastos) {
 
-        }else if (id == R.id.nav_salir) {
+        } else if (id == R.id.nav_ingresos) {
+
+        } else if (id == R.id.nav_salir) {
             Intent i = new Intent(this, MainActivity.class );
             startActivity(i);
             finish();
@@ -88,6 +98,4 @@ public class Inicio extends AppCompatActivity
     }
 
 
-
-    }
-
+}
