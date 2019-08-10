@@ -11,6 +11,7 @@ public class AdminSQLOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table ingresos(codigo int primary key, fecha text, ingreso double)");
+        db.execSQL("create table gastos(codigo int primary key, fecha text, gasto double, categoria text)");
     }
 
     @Override

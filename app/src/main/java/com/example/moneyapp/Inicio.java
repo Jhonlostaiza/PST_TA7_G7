@@ -36,6 +36,7 @@ public class Inicio extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_inicio, new InicioFragment()).commit();
     }
 
 
